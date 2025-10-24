@@ -6,4 +6,10 @@ set(CMAKE_C_STANDARD 11)
 include_directories(.)
 
 add_executable(Cleitinho
-        main.c)
+        Aplicativo.c
+        Clientes/Cliente.h
+        Ordens/Ordem.h
+        Pecas/Peca.h
+        util/util.h
+        util/util.c
+)

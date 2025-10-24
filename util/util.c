@@ -27,12 +27,11 @@ void lerString(char *buffer, int tamanho) {
 // Lê um inteiro de forma segura
 int lerInteiro() {
   char buffer[50];
-  long valor;
   char *endptr;
 
   while (1) {
     lerString(buffer, sizeof(buffer));
-    valor = strtol(buffer, &endptr, 10); // Converte string para long (base 10)
+    long valor = strtol(buffer, &endptr, 10); // Converte string para long (base 10)
 
     // strtol é seguro:
     // Se a conversão foi válida E não sobrou lixo no buffer (ex: "123abc")

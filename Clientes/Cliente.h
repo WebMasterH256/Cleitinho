@@ -13,9 +13,9 @@ struct Cliente
 };
 
 int caClientes(struct Cliente listaDeClientes[], int maxClientes);
-
 void saCliente(struct Cliente listaDeClientes[], int totalClientes);
-
 void adCliente(struct Cliente listaDeClientes[], int *totalClientes);
 
+void listarClientes(struct Cliente listaDeClientes[], int totalClientes);
+struct Cliente* buscarClientePorId(struct Cliente listaDeClientes[], int totalClientes, int idBusca);
 #endif

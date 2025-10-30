@@ -14,6 +14,6 @@ struct Peca
 int caPecas(struct Peca listaDePecas[], int maxPecas);
 void saPeca(struct Peca listaDePecas[], int totalPecas);
 void adPeca(struct Peca listaDePecas[], int *totalPecas);
-void listarPecas(struct Peca listaDePecas[], int totalPecas);
+void liPecas(struct Peca listaDePecas[], int totalPecas);
 
 #endif //CLEITINHO_PECA_H

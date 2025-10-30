@@ -14,4 +14,5 @@ add_executable(Cleitinho
         util/util.c
         Clientes/Cliente.c
         Pecas/Peca.c
+        Ordens/Ordem.c
 )

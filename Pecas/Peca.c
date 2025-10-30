@@ -24,7 +24,7 @@ int caPecas(struct Peca listaDePecas[], int maxPecas) {
     return totalCarregadas;
 }
 
-void saPecas(struct Peca listaDePecas[], int totalPecas) {
+void saPeca(struct Peca listaDePecas[], int totalPecas) {
     FILE *arquivo = fopen(ARQUIVO_PECAS, "w");
     if (arquivo == NULL) {
         perror("Erro grave: Nao foi possivel salvar os dados das pecas.");
@@ -41,7 +41,7 @@ void saPecas(struct Peca listaDePecas[], int totalPecas) {
     fclose(arquivo);
 }
 
-int obterProximoIdPeca(struct  Peca listaDePecas[], int totalPecas) {
+int obPeca(struct  Peca listaDePecas[], int totalPecas) {
     if (totalPecas == 0) return 1;
     return listaDePecas[totalPecas - 1].id + 1;
 }
@@ -53,7 +53,7 @@ void adPeca(struct Peca listaDePecas[], int *totalPecas) {
     }
 
     struct Peca *novaPeca = &listaDePecas[*totalPecas];
-    novaPeca->id = obterProximoIdPeca(listaDePecas, *totalPecas);
+    novaPeca->id = obPeca(listaDePecas, *totalPecas);
 
     printf("--- Cadastro de Nova Peca (ID: %d) ---\n", novaPeca->id);
     printf("Nome da Peca: ");
@@ -67,7 +67,7 @@ void adPeca(struct Peca listaDePecas[], int *totalPecas) {
     printf("\nPeca cadastrada com sucesso!\n");
 }
 
-void listarPecas(struct Peca listaDePecas[], int totalPecas) {
+void liPecas(struct Peca listaDePecas[], int totalPecas) {
     printf("--- Lista de Pecas em Estoque (%d) ---\n", totalPecas);
     if (totalPecas == 0) {
         printf("Nenhuma peca cadastrada.\n");

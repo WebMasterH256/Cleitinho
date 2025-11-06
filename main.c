@@ -25,7 +25,6 @@ int main() {
     numPecas = caPecas(liPeca, MAX_PECAS);
 
     printf("-> %d clientes, %d ordens, %d pecas carregadas.\n", numClientes, numOrdens, numPecas);
-    pausar();
 
     int opcao = -1;
     while (opcao != 0) {
@@ -64,6 +63,7 @@ int main() {
                 break;
         }
     }
+
     return 0;
 }
 
